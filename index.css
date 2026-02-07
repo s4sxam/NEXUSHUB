@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --nexus-red: #DC2626;
+  --nexus-dark: #0F0F0F;
+}
+
+body {
+    background-color: var(--nexus-dark);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+.font-futuristic {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: -0.05em;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #0F0F0F;
+}
+::-webkit-scrollbar-thumb {
+    background: #272727;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--nexus-red);
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 15px rgba(220, 38, 38, 0.2); }
+    50% { box-shadow: 0 0 30px rgba(220, 38, 38, 0.5); }
+}
+
+.nexus-card-glow {
+    animation: pulse-glow 3s infinite ease-in-out;
+}
+
+.glass-panel {
+    background: rgba(30, 30, 30, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.transition-nexus {
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
